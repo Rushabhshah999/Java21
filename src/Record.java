@@ -14,6 +14,19 @@ public class Record {
            System.out.println("x=" + x + ", y=" + y);
 
        }
+
+       // before
+        Object obj = null;
+       if (obj instanceof Point p1) {
+
+           int x= p1.x;
+           int y = p1.y;
+           if(x ==5 && y ==10 ){
+
+           }
+       }
+
+
    }
 
 }

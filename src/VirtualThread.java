@@ -8,9 +8,14 @@ public class VirtualThread {
     public static void main(String args[]){
 
         ExecutorService  executorService =  Executors.newVirtualThreadPerTaskExecutor();
-        executorService.submit(() -> System.out.println("virtual thread called .."));
+        executorService.submit(() -> new A().m1());
         executorService.close();
-
     }
 
+   static class A {
+
+         void m1(){
+            System.out.println("gerg");
+        }
+    }
 }
